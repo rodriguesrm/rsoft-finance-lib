@@ -5,24 +5,24 @@ namespace RSoft.Finance.Contracts.Events
 {
 
     /// <summary>
-    /// Occurs when a new account is changed.
+    /// Occurs when a new PaymentMethod is Changed.
     /// </summary>
-    public class AccountChangedEvent : IMessageEvent
+    public class PaymentMethodChangedEvent : IMessageEvent
     {
+
+        #region Constructors
 
         /// <summary>
         /// Create event instance
         /// </summary>
-        /// <param name="id">Account id</param>
-        /// <param name="name">Account name</param>
-        /// <param name="categoryId">Category id</param>
-        #region Constructors
-
-        public AccountChangedEvent(Guid id, string name, Guid categoryId)
+        /// <param name="id">PaymentMethod id</param>
+        /// <param name="name">PaymentMethod name</param>
+        /// <param name="paymentType">Payment type data</param>
+        public PaymentMethodChangedEvent(Guid id, string name, int paymentType)
         {
             Id = id;
             Name = name;
-            CategoryId = categoryId;
+            PaymentType = paymentType;
         }
 
         #endregion
@@ -30,19 +30,19 @@ namespace RSoft.Finance.Contracts.Events
         #region Properties
 
         /// <summary>
-        /// Category id value
+        /// PaymentMethod id value
         /// </summary>
         public Guid Id { get; private set; }
 
         /// <summary>
-        /// Category name
+        /// PaymentMethod name
         /// </summary>
         public string Name { get; private set; }
 
         /// <summary>
-        /// Category data
+        /// Payment type data
         /// </summary>
-        public Guid CategoryId { get; private set; }
+        public int PaymentType { get; private set; }
 
         #endregion
 

@@ -247,3 +247,4 @@ ModelManifest.xml
 .fake/
 
 # Files project to ignore
+/src/RSoft.Finance.Contracts/RSoft.Finance.Contracts.xml

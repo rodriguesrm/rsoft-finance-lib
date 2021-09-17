@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>netstandard2.1</TargetFramework>
@@ -9,6 +9,16 @@
     <PackageTags>rsoft finance contracts</PackageTags>
     <PackageIcon>rsoft-finance-contract-icon-32x32.png</PackageIcon>
     <PackageIconUrl />
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DocumentationFile>RSoft.Finance.Contracts.xml</DocumentationFile>
+    <OutputPath>bin\Debug\netstandard2.1\</OutputPath>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <DocumentationFile>RSoft.Finance.Contracts.xml</DocumentationFile>
+    <OutputPath>bin\Release\netstandard2.1\</OutputPath>
   </PropertyGroup>
 
   <ItemGroup>
@@ -23,12 +33,14 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Commands\" />
+    <PackageReference Include="RSoft.Lib.Common" Version="1.5.0" />
+    <PackageReference Include="RSoft.Lib.Messaging" Version="1.5.0" />
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="RSoft.Lib.Common" Version="1.1.1" />
-    <PackageReference Include="RSoft.Lib.Messaging" Version="1.0.0" />
+    <None Update="RSoft.Finance.Contracts.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
 
 </Project>

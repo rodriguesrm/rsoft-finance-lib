@@ -10,17 +10,32 @@ namespace RSoft.Finance.Contracts.Events
     public class CategoryCreatedEvent : IMessageEvent
     {
 
+        #region Constructors
+
+        /// <summary>
+        /// Create event instance
+        /// </summary>
+        /// <param name="id">Category id</param>
+        /// <param name="name">Category name</param>
+        public CategoryCreatedEvent(Guid id, string name)
+        {
+            Id = id;
+            Name = name;
+        }
+
+        #endregion
+
         #region Properties
 
         /// <summary>
         /// Category id value
         /// </summary>
-        public Guid Id { get; set; }
+        public Guid Id { get; private set; }
 
         /// <summary>
         /// Category name
         /// </summary>
-        public string Name { get; set; }
+        public string Name { get; private set; }
 
         #endregion
 

@@ -1,13 +1,12 @@
-﻿using RSoft.Lib.Messaging.Contracts;
-using System;
+﻿using System;
 
 namespace RSoft.Finance.Contracts.Events
 {
 
     /// <summary>
-    /// Occurs when a new category is changed.
+    /// Occurs when account status changed (enable or disable)
     /// </summary>
-    public class CategoryChangedEvent : IMessageEvent
+    public class AccountStatusChangedEvent
     {
 
         #region Constructors
@@ -15,12 +14,12 @@ namespace RSoft.Finance.Contracts.Events
         /// <summary>
         /// Create event instance
         /// </summary>
-        /// <param name="id">Category id</param>
-        /// <param name="name">Category name</param>
-        public CategoryChangedEvent(Guid id, string name)
+        /// <param name="id">Account id</param>
+        /// <param name="isActive">Status active flag</param>
+        public AccountStatusChangedEvent(Guid id, bool isActive)
         {
             Id = id;
-            Name = name;
+            IsActive = isActive;
         }
 
         #endregion
@@ -28,14 +27,14 @@ namespace RSoft.Finance.Contracts.Events
         #region Properties
 
         /// <summary>
-        /// Category id value
+        /// Account id value
         /// </summary>
         public Guid Id { get; private set; }
 
         /// <summary>
-        /// Category name
+        /// Active sttus flag
         /// </summary>
-        public string Name { get; private set; }
+        public bool IsActive { get; private set; }
 
         #endregion
 

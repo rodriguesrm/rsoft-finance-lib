@@ -12,6 +12,8 @@ namespace RSoft.Finance.Contracts.Events
     public class PersonCreatedEvent : IMessageEvent, IAddress
     {
 
+        //TODO: Make setter private, need change IAddress interface
+
         #region Properties
 
         /// <summary>
