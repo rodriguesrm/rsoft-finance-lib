@@ -4,9 +4,9 @@ namespace RSoft.Finance.Contracts.Events
 {
 
     /// <summary>
-    /// Occurs when account status changed (enable or disable)
+    /// Occurs when entry status changed (enable or disable)
     /// </summary>
-    public class AccountStatusChangedEvent
+    public class EntryStatusChangedEvent
     {
 
         #region Constructors
@@ -14,9 +14,9 @@ namespace RSoft.Finance.Contracts.Events
         /// <summary>
         /// Create event instance
         /// </summary>
-        /// <param name="id">Account id</param>
+        /// <param name="id">Entry id</param>
         /// <param name="isActive">Status active flag</param>
-        public AccountStatusChangedEvent(Guid id, bool isActive)
+        public EntryStatusChangedEvent(Guid id, bool isActive)
         {
             Id = id;
             IsActive = isActive;
@@ -27,7 +27,7 @@ namespace RSoft.Finance.Contracts.Events
         #region Properties
 
         /// <summary>
-        /// Account id value
+        /// Entry id value
         /// </summary>
         public Guid Id { get; private set; }
 

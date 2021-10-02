@@ -22,9 +22,9 @@ namespace RSoft.Finance.Contracts.Events
         /// <param name="date">Date of register</param>
         /// <param name="transactionType">Transaction type number (code of enum)</param>
         /// <param name="amount">Transaction amount</param>
-        /// <param name="accountId">Account id</param>
+        /// <param name="entryId">Entry id</param>
         /// <param name="paymentMethodId">Payment method id</param>
-        public TransactionCreatedEvent(Guid id, int year, int month, DateTime date, TransactionTypeEnum transactionType, float amount, Guid accountId, Guid paymentMethodId)
+        public TransactionCreatedEvent(Guid id, int year, int month, DateTime date, TransactionTypeEnum transactionType, float amount, Guid entryId, Guid paymentMethodId)
         {
             Id = id;
             Year = year;
@@ -32,7 +32,7 @@ namespace RSoft.Finance.Contracts.Events
             Date = date;
             TransactionType = transactionType;
             Amount = amount;
-            AccountId = accountId;
+            EntryId = entryId;
             PaymentMethodId = paymentMethodId;
         }
 
@@ -71,9 +71,9 @@ namespace RSoft.Finance.Contracts.Events
         public float Amount { get; private set; }
 
         /// <summary>
-        /// Account id
+        /// Entry id
         /// </summary>
-        public Guid AccountId { get; private set; }
+        public Guid EntryId { get; private set; }
 
         /// <summary>
         /// Payment method id

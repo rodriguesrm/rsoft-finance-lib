@@ -5,9 +5,9 @@ namespace RSoft.Finance.Contracts.Events
 {
 
     /// <summary>
-    /// Occurs when a new account is created.
+    /// Occurs when a new entry is created.
     /// </summary>
-    public class AccountCreatedEvent : IMessageEvent
+    public class EntryCreatedEvent : IMessageEvent
     {
 
         #region Constructors
@@ -15,10 +15,10 @@ namespace RSoft.Finance.Contracts.Events
         /// <summary>
         /// Create event instance
         /// </summary>
-        /// <param name="id">Account id</param>
-        /// <param name="name">Account name</param>
+        /// <param name="id">Entry id</param>
+        /// <param name="name">Entry name</param>
         /// <param name="categoryId">Category id</param>
-        public AccountCreatedEvent(Guid id, string name, Guid categoryId)
+        public EntryCreatedEvent(Guid id, string name, Guid categoryId)
         {
             Id = id;
             Name = name;

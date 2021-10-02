@@ -12,3 +12,6 @@ General libraries for the context of the financial platform
 
 #### Version 1.1.0
 	- Added AccrualPeriodStartedEvent and AccrualPeriodClosedEvent
+
+#### Version 1.2.0
+	- Rename Account events to Entry events

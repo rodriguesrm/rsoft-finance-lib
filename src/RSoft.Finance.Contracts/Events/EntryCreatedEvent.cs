@@ -5,20 +5,20 @@ namespace RSoft.Finance.Contracts.Events
 {
 
     /// <summary>
-    /// Occurs when a new account is changed.
+    /// Occurs when a new entry is changed.
     /// </summary>
-    public class AccountChangedEvent : IMessageEvent
+    public class EntryChangedEvent : IMessageEvent
     {
 
         /// <summary>
         /// Create event instance
         /// </summary>
-        /// <param name="id">Account id</param>
-        /// <param name="name">Account name</param>
+        /// <param name="id">Entry id</param>
+        /// <param name="name">Entry name</param>
         /// <param name="categoryId">Category id</param>
         #region Constructors
 
-        public AccountChangedEvent(Guid id, string name, Guid categoryId)
+        public EntryChangedEvent(Guid id, string name, Guid categoryId)
         {
             Id = id;
             Name = name;
