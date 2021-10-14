@@ -15,3 +15,6 @@ General libraries for the context of the financial platform
 
 #### Version 1.2.0
 	- Rename Account events to Entry events
+
+#### Version 1.3.0
+	- Added Revenue tax type enum
