@@ -18,3 +18,6 @@ General libraries for the context of the financial platform
 
 #### Version 1.3.0
 	- Added Revenue tax type enum
+
+#### Version 1.4.0
+	- Added Person Type enum
